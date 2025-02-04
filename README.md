@@ -9,8 +9,14 @@ A Python tool to analyze and parse through exported password manager data. This 
 ```bash
 pip install -r requirements.txt
 ```
+> [!TIP]
+> If you're just wanting the program, go to releases.
+## Usage for the CLI
 
-## Usage
+
+>[!IMPORTANT]
+> The rest of this documentation and repository is either for development or the use of the CLI
+> 
 
 The script accepts CSV files exported from password managers. Most password managers allow you to export your data in CSV format.
 
@@ -37,17 +43,17 @@ python password_analyzer.py export.csv
 python password_analyzer.py export.csv --columns username url email
 ```
 
-3. Filter by domain:
+1. Filter by domain:
 ```bash
 python password_analyzer.py export.csv --domain "google.com"
 ```
 
-4. Search by email:
+2. Search by email:
 ```bash
 python password_analyzer.py export.csv --email "user@example.com"
 ```
 
-5. Combine filters and column selection:
+3. Combine filters and column selection:
 ```bash
 python password_analyzer.py export.csv --domain "google.com" --columns username url
 ```
